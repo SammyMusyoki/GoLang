@@ -11,9 +11,9 @@ import (
 var nameFive = "Can be declared here"
 
 // Varibales
-// Integers
-func main() {
-	
+// Integer
+
+func dataTypes() {
 	// Strings
 	var nameOne string = "hello"
 	var nameTwo = "Sammy"
@@ -53,7 +53,9 @@ func main() {
 	scoreThree := 1.4
 
 	fmt.Println(scoreOne, scoreTwo, scoreThree)
+}
 
+func printFormat() {
 	// Print Statements
 	
 	// Print
@@ -95,7 +97,11 @@ func main() {
 	// Sprintf (save formatted strings)
 	var str = fmt.Sprintf("my age is %v and my name is %v \n", age, name)
 	fmt.Println("the saved string is:", str)
+}
 
+
+
+func sliceArray() {
 	// Arrays and Slices
 	// Cannot append to arrays but can append in slices.
 	// var ages [3]int = [3]int{20, 24, 30}
@@ -137,15 +143,40 @@ func main() {
 	rangeOne = append(rangeOne, "Freddy")
 
 	fmt.Println(rangeOne, rangeTwo, rangeThree)
-
-
-	// STANDARD LIBRARY
-
-
 }
 
 func greeting() {
+	// STANDARD LIBRARY
 	greeting := "Hello there friends!"
 
 	fmt.Println(strings.Contains(greeting, "hello"))
+	fmt.Println(strings.ReplaceAll(greeting, "hello", "hi"))
+	fmt.Println(strings.ToUpper(greeting))
+	fmt.Println(strings.Index(greeting, "th"))
+	fmt.Println(strings.Split(greeting, " "))
+
+	// The original value always remains unchanged
+	fmt.Println("original string value: ", greeting)
+
+}
+
+// Function to demo for loop as while loop
+
+func whileLoop() {
+	// while loop
+	// for loop executes till
+	// i < 3 condition is true
+	i := 0
+	for i < 3 {
+		i += 2
+	}
+	fmt.Println(i)
+}
+
+
+
+// This is the main function that is going to be executed on go run.
+func main() {
+	// Call any function here.
+	whileLoop()
 }
